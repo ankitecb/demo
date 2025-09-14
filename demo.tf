@@ -11,7 +11,6 @@ resource "aws_s3_bucket" "example" {
   bucket = "my-demo-bucket-${data.aws_caller_identity.current.account_id}"
 
 
-
 }
 
 terraform {
