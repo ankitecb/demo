@@ -8,7 +8,7 @@ data "aws_caller_identity" "current" {}
 
 resource "aws_s3_bucket" "example" {
 
-  bucket = "my-demo-bucket-${data.aws_caller_identity.current.account_id}"
+  bucket = "my-demoo-bucket-${data.aws_caller_identity.current.account_id}"
 
 
 }
