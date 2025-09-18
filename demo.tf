@@ -4,15 +4,6 @@ provider "aws" {
 
 }
 
-data "aws_caller_identity" "current" {}
-
-resource "aws_s3_bucket" "example" {
-
-  bucket = "my-demoo-bucket-${data.aws_caller_identity.current.account_id}"
-
-
-}
-
 terraform {
 
   cloud {
@@ -32,6 +23,16 @@ terraform {
   }
 
 }
+
+
+data "aws_caller_identity" "current" {}
+
+resource "aws_s3_bucket" "example" {
+
+bucket = "my-demoo-bucket-${data.aws_caller_identity.current.account_id}"
+}
+
+
 output "a3_bucket_arn" {
   value = aws_s3_bucket.example.arn
 }
