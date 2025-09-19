@@ -1,7 +1,7 @@
 variable "region" {
   description = "AWS region to deploy resources into"
   type        = string
-  default     = "ap-south-1"
+  default     = "eu-west-1"
 }
 
 variable "bucket_prefix" {
